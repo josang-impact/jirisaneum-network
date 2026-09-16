@@ -3,10 +3,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap">
 <style>
-/* ── 카카오임팩트 브랜드 테마 ──────────────────────────────
-   paper/ink/muted 및 액센트 계열은 사내 theme _Template에서 가져옴.
-   차트용 6색은 같은 색상을 유지하되 크림 지면(#F5F2E9) 위에서
-   색각 이상·대비 검사를 통과하도록 명도만 낮춘 값이다.        */
+/* ── 팔레트 ────────────────────────────────────────────
+   차트용 6색은 크림 지면(#F5F2E9) 위에서 색각 이상(적록·청황)
+   판별과 명도 대비 기준을 통과하도록 조정한 값이다.          */
 :root{
   color-scheme: light;
 
@@ -66,8 +65,12 @@ a{color:var(--p-1)}
 
 /* ── 헤더 ── */
 header{padding-block:56px 44px; border-bottom:var(--bd)}
-.brandbar{display:flex; align-items:center; gap:14px; margin-bottom:38px}
-.brandbar img{height:26px; width:auto; display:block}
+.brandbar{display:flex; align-items:center; gap:14px; margin-bottom:38px; flex-wrap:wrap}
+.brandbar .bmark{
+  font-family:"Pretendard Variable",Pretendard,"Noto Sans KR",sans-serif;
+  font-size:16px; font-weight:800; letter-spacing:-.03em; color:var(--ink);
+  text-transform:none; padding-left:0; border-left:0;
+}
 .brandbar span{
   font-family:"Inter",sans-serif; font-size:11px; font-weight:600; letter-spacing:.14em;
   text-transform:uppercase; color:var(--muted); padding-left:14px; border-left:1px solid var(--line-2);
@@ -347,15 +350,14 @@ td.ok{color:var(--c3); font-weight:700} td.no{color:var(--c2); font-weight:700}
 
 footer{border-top:var(--bd); padding-block:32px 0; margin-top:10px;
   display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between}
-footer img{height:22px; width:auto; opacity:.75}
-footer p{font-family:"Inter",sans-serif; font-size:11px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--muted); font-weight:600}
+footer p{font-size:11.5px; letter-spacing:.04em; color:var(--muted); font-weight:600}
+footer p:first-child{color:var(--ink); font-weight:700; letter-spacing:-.01em; font-size:13px}
 </style>
 
 <div class="wrap">
 <header>
   <div class="brandbar">
-    <img src="assets/kakaoimpact-logo.png" alt="카카오임팩트">
+    <span class="bmark">브라이언임팩트</span>
     <span>임팩트그라운드</span>
   </div>
   <p class="kicker">사회적협동조합 지리산이음 · 네트워크 분석</p>
@@ -896,7 +898,7 @@ footer p{font-family:"Inter",sans-serif; font-size:11px; letter-spacing:.06em;
 </div>
 
 <footer class="wrap" style="padding-block:32px 40px">
-  <img src="assets/kakaoimpact-logo.png" alt="카카오임팩트">
+  <p>브라이언임팩트 임팩트그라운드</p>
   <p>지리산이음 네트워크 지형도 · 2026</p>
 </footer>
 
