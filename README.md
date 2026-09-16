@@ -6,7 +6,7 @@
 카카오임팩트가 작성했고, **지리산이음**과 임팩트 측정을 맡고 있는
 **한국사회가치평가**와 공유하기 위해 만들었습니다.
 
-👉 **[문서 열기](https://example.github.io/)** *(GitHub Pages 배포 후 주소로 교체)*
+👉 **[문서 열기](https://josang-impact.github.io/jirisaneum-network/)**
 
 ---
 
