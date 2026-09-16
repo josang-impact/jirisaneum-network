@@ -293,6 +293,27 @@ ul.clean li::marker{color:var(--ink)}
 .howto .hl{font-size:14px; font-weight:700; color:var(--ink); margin-top:4px}
 .howto .hd{font-size:12.5px; color:var(--muted); line-height:1.6}
 
+/* ── 마을 조사 타일 ── */
+.survey{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+@media (max-width:700px){ .survey{grid-template-columns:repeat(2,1fr)} }
+.survey > div{background:var(--white); border:1.5px solid var(--ink); border-radius:14px;
+  padding:18px 16px; display:flex; flex-direction:column; gap:2px; align-items:flex-start}
+.survey .sv{font-family:"Inter",sans-serif; font-size:30px; font-weight:800; color:var(--ink);
+  letter-spacing:-.04em; line-height:1}
+.survey .sl{font-size:12.5px; color:var(--muted); font-weight:500}
+
+.mini{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.mini > div{background:var(--b-3); border-radius:12px; padding:14px 15px;
+  display:flex; flex-direction:column; gap:4px}
+.mini .mv{font-family:"Inter",sans-serif; font-size:21px; font-weight:800; color:var(--ink);
+  letter-spacing:-.03em; line-height:1}
+.mini .ml{font-size:11.5px; color:var(--muted); line-height:1.45}
+
+/* ── 단체 칩 나열 ── */
+.orgline{display:flex; flex-wrap:wrap; gap:7px; margin-top:4px}
+.orgline span{font-size:12.5px; padding:5px 12px; border-radius:999px;
+  border:1.5px solid var(--ink); background:var(--white); color:var(--ink); font-weight:500}
+
 /* ── 가로 막대 목록 ── */
 .bars{display:flex; flex-direction:column; gap:1px; background:var(--ink);
   border:1.5px solid var(--ink); border-radius:var(--radius); overflow:hidden}
@@ -374,7 +395,7 @@ footer p{font-family:"Inter",sans-serif; font-size:11px; letter-spacing:.06em;
         <span class="hd">docx · xlsx · pdf · pptx · hwp 전부 텍스트로 변환해 확인</span></div>
       <div><span class="hn num">1,100</span><span class="hl">포럼 고유 참가자</span>
         <span class="hd">2015~2026년 명단에서 이름 기준으로 중복 제거한 수</span></div>
-      <div><span class="hn num">214</span><span class="hl">이름이 확인되는 협력처</span>
+      <div><span class="hn num">225</span><span class="hl">이름이 확인되는 협력처</span>
         <span class="hd">단체 · 기관 · 지역을 여섯 유형으로 분류</span></div>
     </div>
   </div>
@@ -547,6 +568,88 @@ footer p{font-family:"Inter",sans-serif; font-size:11px; letter-spacing:.06em;
         <p>100명이 1인 2만 원씩 사흘이면 <strong>약 3,000만 원</strong>이 지역 식당과 술집으로 들어갑니다.
         지리산이음은 이것을 "주민들이 포럼에 직접 참여하지 않더라도 지지하는 배경"이라고 적었습니다.</p>
       </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="wrap">
+<section>
+  <div class="sec-head">
+    <p class="kicker">깊이 보기 · 마을</p>
+    <h2>인구 2,000명 면에서 시작한 일</h2>
+    <p>지리산이음은 2012년 남원시 산내면의 마을 카페 한 곳에서 출발했습니다.
+    포럼이 밖으로 뻗은 가지라면, 마을은 뿌리입니다.</p>
+  </div>
+
+  <div class="stack">
+    <div class="prose">
+      <h3>2023년, 마을을 처음 전부 세어봤습니다</h3>
+      <p>4개월 동안 산내면의 길·공간·숙소·식당·단체·동아리·사람을 조사했습니다.
+      <strong>인구 2,000명인 면을 종합적으로 조사한 것은 이때가 처음</strong>입니다.
+      조사원은 마을 주민 두 사람이었습니다.</p>
+    </div>
+    <div class="survey" id="survey"></div>
+    <figcaption>2023년 산내면 마을조사 결과. '사람'은 팔 수 있는 상품·서비스와
+    나눌 수 있는 경험·지식·기술을 설문으로 조사한 것입니다.</figcaption>
+
+    <div class="prose">
+      <p>인구 2,000명에 <strong>단체 29개와 동아리 36개</strong>가 있다는 것이 이 조사의 핵심입니다.
+      65명당 하나 꼴입니다. 지리산이음이 이후 한 일은 새 모임을 만드는 것이 아니라
+      <mark>이미 있던 것들을 서로 보이게 하는 일</mark>이었습니다.</p>
+    </div>
+
+    <h3 style="margin-top:12px">서로를 발견하게 만든 세 가지 장치</h3>
+
+    <div class="duo">
+      <figure>
+        <div class="card">
+          <div class="chart-title"><h3>지리산쌀롱 참가자 (명)</h3></div>
+          <svg id="chart-salon" viewBox="0 0 440 280" role="img" aria-label="연도별 지리산쌀롱 참가자"></svg>
+        </div>
+        <figcaption>2024년 11회차에서 2026년 9월 25회차까지 이어졌습니다.
+        로컬 활동가 초청에서 북토크 형식으로 바뀌며 참가자가 늘었습니다.</figcaption>
+      </figure>
+      <div class="card" style="display:flex; flex-direction:column; gap:14px; justify-content:center">
+        <h3 style="font-size:15px">산내마을 모두발표회</h3>
+        <p style="font-size:14px; color:var(--body); line-height:1.7">
+          마을의 단체·모임·공간이 한자리에 모여 지난해를 돌아보고 올해 계획을 나누는 자리입니다.
+          2025년에 처음 열렸습니다.</p>
+        <div class="mini">
+          <div><span class="mv num">16 → 20</span><span class="ml">참여 단체<br>2025 → 2026</span></div>
+          <div><span class="mv num">33</span><span class="ml">자료집에 실린<br>단체·모임·공간</span></div>
+        </div>
+        <p style="font-size:13px; color:var(--muted); line-height:1.65">
+          그 결과가 농림축산식품부 기초생활거점 조성사업과 이어지며
+          앞으로 5년치 마을사업 기반이 됐습니다.</p>
+      </div>
+    </div>
+
+    <div class="note good">
+      <h3>단체 열 곳이 잔치를 같이 엽니다</h3>
+      <p>2024년 <strong>대정길 페스티벌</strong>은 남원시공동체지원센터 지원으로 지리산이음이 기획했습니다.
+      2025년 <strong>제2회 대정길 작은잔치 '커먼!'</strong>은 마을 단체 열 곳이 공동주최했고
+      주민 100여 명이 모였습니다.</p>
+      <div class="orgline">
+        <span>비니루없는점빵</span><span>산내청년네트워크 틈새</span><span>지리산여성회의</span>
+        <span>지리산이음</span><span>공산댕</span><span>북죽북적</span><span>시시콜콜문학반</span>
+        <span>아주작은페미니즘학교 탱자</span><span>찬장과책장</span><span>품안작은도서관</span>
+      </div>
+      <p>기획하는 자리에서 <mark>거드는 자리로 옮겨간 것</mark>이 이 사업의 성과입니다.
+      오일팔달리기도 같은 흐름입니다. 실상사작은학교가 매년 하던 행사가 코로나로 끊겼다가
+      2025년 마을 단체들이 함께 되살렸고, 2026년에는 주민 100여 명이 뛰었습니다.</p>
+    </div>
+
+    <div class="prose">
+      <h3>토닥이 카페를 그만두었습니다</h3>
+      <p>2024년 토닥은 마을 카페에서 <strong>공유공간 겸 마을안내소</strong>로 바뀌었습니다.
+      매출을 올리는 대신, 토닥을 거점으로 여기는 사람 수를 늘려 후원과 참여로 유지하는 쪽을 택했습니다.
+      2025년 한 해 <strong>189회</strong>의 대관과 모임이 있었고, 다섯 개 이상의 모임이 정기적으로 씁니다.</p>
+      <p>2025년 1월에는 문을 닫는 대신 <strong>'요일지기'</strong>를 뒀습니다.
+      주민들이 요일을 나눠 맡아 열고 닫고 청소했습니다. 2026년 1월에도 같은 방식으로 운영했습니다.
+      공간을 <em>쓰는 사람</em>에서 <em>돌보는 사람</em>으로 관계가 바뀐 지점입니다.</p>
+      <p>다만 2025년 공간 대관료 수입은 <strong>511만 원</strong>으로 예산 1,500만 원의 34%였습니다.
+      커먼즈로서의 성격과 자체 수입은 아직 같이 가지 못하고 있습니다.</p>
     </div>
   </div>
 </section>
@@ -770,7 +873,7 @@ footer p{font-family:"Inter",sans-serif; font-size:11px; letter-spacing:.06em;
       <h3>확인하지 못한 것</h3>
       <ul class="clean">
         <li>2016·2018년 협력기관이 3개로 집계되는데, 앞뒤 연도에 비해 유독 적어 기록 누락일 가능성이 있습니다.</li>
-        <li>명단 214곳은 <strong>2023년 이후에 치우쳐</strong> 있습니다. 2019~2022년 보고서가 협력처 이름을 거의 적지 않았습니다.</li>
+        <li>명단 225곳은 <strong>2023년 이후에 치우쳐</strong> 있습니다. 2019~2022년 보고서가 협력처 이름을 거의 적지 않았습니다.</li>
         <li>레지던스 2억 6,000만 원 사업의 경과는 총회 자료를 포함해 어디에도 없습니다.</li>
         <li>2026년 수치는 상반기·잠정 기준이라 연말에 달라집니다.</li>
       </ul>
@@ -895,6 +998,11 @@ var NODES = [
   N('village','삼달리주민회',2026,null), N('village','산내자전거작업장',2026,null),
   N('village','마을극단 떼아뜨르 마고',2025,null), N('village','산내초 학부모회',2024,null),
   N('village','람천수질개선주민위원회',2025,null),
+  N('village','공산댕',2025,null), N('village','북죽북적',2025,null),
+  N('village','시시콜콜문학반',2025,null), N('village','아주작은페미니즘학교 탱자',2025,null),
+  N('village','찬장과책장',2025,null), N('village','품안작은도서관',2025,null),
+  N('village','적극적 시민모임',2024,null), N('village','00수다회',2024,2024),
+  N('village','비니루없는협동조합',2024,null),
   /* 지리산권 */
   N('jiri','구례 지리산사람들',2019,null,1,'윤주옥 · 정태연 · 정정환'),
   N('jiri','함양작은변화네트워크',2023,null,1,'김찬두'),
@@ -996,6 +1104,7 @@ var NODES = [
   N('public','한국임업진흥원',2022,2022,1,'산촌포럼 협력'),
   N('public','지리산국립공원 전북사무소',2019,null,1),
   N('public','생명보험사회공헌위원회',2024,null,null,'활동가학교 재원'),
+  N('public','남원시 농촌종합센터',2023,2023), N('public','산내면 생생마을관리소',2023,2023),
   N('public','서울시 사회적경제지원센터',2017,2017), N('public','서울혁신파크',2019,2019),
   N('public','서울시공익활동지원센터',2024,null), N('public','경기도공익활동지원센터',2024,2024),
   N('public','대구시공익활동지원센터',2025,null), N('public','울산 공익활동지원센터',2024,2024),
@@ -1106,6 +1215,47 @@ simpleBar('chart-cohort', cohort, 'rate', 45, [0,15,30,45], 'var(--c1)', '%', tr
       '<td style="text-align:left; font-family:\'Pretendard Variable\',Pretendard,\'Noto Sans KR\',sans-serif; white-space:normal">'+d.theme+'</td>';
     tb.appendChild(tr);
   });
+})();
+
+/* ══════════ 마을 ══════════ */
+var survey = [
+  {n:'사람', v:100}, {n:'동아리', v:36}, {n:'숙소', v:34}, {n:'단체', v:29},
+  {n:'식당', v:24}, {n:'마을길', v:22}, {n:'공간', v:22}, {n:'문화자원', v:13}
+];
+var salon = [
+  {y:'2024', n:5, p:65}, {y:'2025', n:6, p:111}, {y:'2026', n:4, p:66, partial:true}
+];
+(function(){
+  var root=document.getElementById('survey');
+  survey.forEach(function(d){
+    var c=document.createElement('div');
+    c.innerHTML='<span class="sv num">'+d.v+'</span><span class="sl">'+d.n+'</span>';
+    root.appendChild(c);
+  });
+})();
+(function(){
+  var svg=document.getElementById('chart-salon');
+  var W=440,H=280,ml=40,mr=12,mt=24,mb=48;
+  var iw=W-ml-mr, ih=H-mt-mb, max=120;
+  var yOf=function(v){ return mt+ih-(v/max)*ih; };
+  var step=iw/salon.length, bw=54;
+  [0,40,80,120].forEach(function(v){
+    el('line',{x1:ml,y1:yOf(v),x2:W-mr,y2:yOf(v),class:'gridline'},svg);
+    el('text',{x:ml-8,y:yOf(v)+4,class:'axis-text','text-anchor':'end'},svg).textContent=v;
+  });
+  salon.forEach(function(d,i){
+    var cx=ml+step*i+step/2, y1=yOf(d.p);
+    var r=el('rect',{x:cx-bw/2,y:y1,width:bw,height:Math.max(1,yOf(0)-y1),rx:2,
+      fill:'var(--c1)',opacity:d.partial?0.55:1},svg);
+    if (d.partial) r.setAttribute('stroke','var(--ink)'), r.setAttribute('stroke-dasharray','3 3');
+    r.addEventListener('mousemove',function(e){
+      showTip(e, d.y+'년 지리산쌀롱\n'+d.n+'회 · '+d.p+'명'+(d.partial?'\n※ 9월까지':'')); });
+    r.addEventListener('mouseleave',hideTip);
+    el('text',{x:cx,y:y1-6,class:'bar-label','text-anchor':'middle'},svg).textContent=d.p;
+    el('text',{x:cx,y:H-mb+20,class:'axis-text','text-anchor':'middle'},svg).textContent=d.y;
+    el('text',{x:cx,y:H-mb+34,class:'axis-text','text-anchor':'middle'},svg).textContent=d.n+'회';
+  });
+  el('text',{x:ml-8,y:mt-6,class:'axis-text','text-anchor':'end'},svg).textContent='명';
 })();
 
 /* ══════════ 2026 지리산권 막대 ══════════ */
